@@ -1,0 +1,31 @@
+.rareSection {
+    background-color: #fff;
+    padding: 0;
+}
+
+.rareH1 {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+}
+
+.card {
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    height: 13cm;
+    margin-bottom: 30px;
+}
+
+.cardImage {
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.cardText {
+    line-height: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
