@@ -9,7 +9,7 @@
   "NFT_NAME": "Meta Army",
   "SYMBOL": "MetaArmy",
   "MAX_SUPPLY": 3500,
-  "WEI_COST": 3600000000000000000,
+  "WEI_COST": 0,
   "DISPLAY_COST": 0.015,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "Oasis",
