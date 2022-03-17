@@ -100,7 +100,7 @@ function App() {
   const blockchain = useSelector((state) => state.blockchain);
   const data = useSelector((state) => state.data);
   const [claimingNft, setClaimingNft] = useState(false);
-  const [feedback, setFeedback] = useState(`Click to stake your NFT.`);
+  const [feedback, setFeedback] = useState(`Click to mint your NFT.`);
   const [mintAmount, setMintAmount] = useState(1);
   const [CONFIG, SET_CONFIG] = useState({
     CONTRACT_ADDRESS: "",
@@ -128,7 +128,7 @@ function App() {
     let totalGasLimit = String(gasLimit * mintAmount);
     console.log("Cost: ", totalCostWei);
     console.log("Gas limit: ", totalGasLimit);
-    setFeedback(`Approving your ${CONFIG.NFT_NAME}...`);
+    setFeedback(`Minting your ${CONFIG.NFT_NAME}...`);
     setClaimingNft(true);
     blockchain.smartContract.methods
       .mint(mintAmount)
@@ -146,7 +146,7 @@ function App() {
       .then((receipt) => {
         console.log(receipt);
         setFeedback(
-          `Staked`
+          `WOW, the ${CONFIG.NFT_NAME} is yours! go visit Oasis to view it.`
         );
         setClaimingNft(false);
         dispatch(fetchData(blockchain.account));
@@ -229,7 +229,7 @@ function App() {
                 color: "var(--accent-text)",
               }}
             >
-              
+              {data.totalSupply} / {CONFIG.MAX_SUPPLY}
             </s.TextTitle>
             <s.TextDescription
               style={{
@@ -264,7 +264,7 @@ function App() {
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  STAKE {CONFIG.SYMBOL} {" "}
+                 1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
                   {CONFIG.NETWORK.SYMBOL}.
                 </s.TextTitle>
                 <s.SpacerXSmall />
@@ -361,7 +361,7 @@ function App() {
                           getData();
                         }}
                       >
-                        {claimingNft ? "LOADING" : "APPROVE"}
+                        {claimingNft ? "LOADING" : "MINT"}
                       </StyledButton>
                     </s.Container>
                   </>
