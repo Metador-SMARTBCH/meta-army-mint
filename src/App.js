@@ -163,8 +163,8 @@ function App() {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 30) {
-      newMintAmount = 30;
+    if (newMintAmount > 20) {
+      newMintAmount = 20;
     }
     setMintAmount(newMintAmount);
   };
@@ -361,7 +361,7 @@ function App() {
                           getData();
                         }}
                       >
-                        {Approving ? "LOADING" : "APPROVE"}
+                        {claimingNft ? "LOADING" : "MINT"}
                       </StyledButton>
                     </s.Container>
                   </>
