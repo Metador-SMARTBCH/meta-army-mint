@@ -264,7 +264,7 @@ function App() {
                 <s.TextTitle
                   style={{ textAlign: "center", color: "var(--accent-text)" }}
                 >
-                  1 {CONFIG.SYMBOL} costs {CONFIG.DISPLAY_COST}{" "}
+                  STAKE {CONFIG.SYMBOL} {" "}
                   {CONFIG.NETWORK.SYMBOL}.
                 </s.TextTitle>
                 <s.SpacerXSmall />
@@ -361,7 +361,7 @@ function App() {
                           getData();
                         }}
                       >
-                        {claimingNft ? "LOADING" : "MINT"}
+                        {claimingNft ? "LOADING" : "STAKE"}
                       </StyledButton>
                     </s.Container>
                   </>
